@@ -179,6 +179,16 @@
     background-repeat: no-repeat; /* Do not repeat the image */
     background-position:center;
   }
+
+
+  .marco:hover{
+    background-image: url('../images/circulo.png');
+    background-size:contain;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position:center;
+  }
+
+
   .box_product p{
     color:black;
   }
@@ -448,6 +458,10 @@
 
 .total-bar{
   width: 100%;
+}
+
+.total-bar :hover{
+  color: #fece18;
 }
     .PanelIzquierdo {
       padding-top: 1vh;
