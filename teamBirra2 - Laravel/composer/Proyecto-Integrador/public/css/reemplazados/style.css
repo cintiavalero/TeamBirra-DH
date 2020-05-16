@@ -1,7 +1,7 @@
 /*----------------------------------------INDEX------------------------------------*/
 .panel-de-muestra{
   height: 90vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: Open Sans Condensed;
 
 }
 
@@ -31,7 +31,7 @@
 
 .contenido-muestra{
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -151,7 +151,7 @@ style="background-color:#fece18"
 
 /*----------------------------barra de filtro----------------------------------*/
 .filtro-de-pagina {
-  font-family: 'Roboto', sans-serif;
+  font-family: Open Sans Condensed;
   font-size: 1.2em;
   margin: 3px 0 12px;
   overflow: hidden;
@@ -217,16 +217,13 @@ style="background-color:#fece18"
   display: block;
   float: left;
   width: 100%;
-  height: 95%;
+    height: 95%;;
 }
 
 .card_1 a{
   text-decoration: none;}
-.card_1 p{
-  color: black;
-}
-  .marco {
 
+  .marco {
     background-image:  url('../images/circulo-amarillo.png');
     background-size:contain;
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -242,20 +239,11 @@ style="background-color:#fece18"
   }
 
 
-  .box_product {
-    position: absolute;
-    padding:2%;
-    width: 90%;
-    height: 90%;
-    border-style: solid;
-    border-color: black;
-    background-color: rgba(255, 0, 0, 0.5);
+  .box_product p{
     color:black;
-
   }
 
   .product{
-    display: block;
     padding:2%;
     border: 0;
     font-size: 100%;
@@ -341,7 +329,7 @@ style="background-color:#fece18"
   }
 
   h5{
-    font-family: 'Roboto', sans-serif;
+    font-family: Catamaran,sans-serif;
   }
 
 
@@ -419,7 +407,7 @@ style="background-color:#fece18"
 
   .categoria{
 
-    font-family: 'Roboto', sans-serif;
+    font-family: Open Sans Condensed;
     display: block;
   }
 
@@ -443,7 +431,7 @@ style="background-color:#fece18"
   }
 
   .ultimo .checkbox{
-    font-family: 'Roboto', sans-serif;
+    font-family: Open Sans Condensed;
     padding-left: 15%;
     padding-bottom: 3%
     font-size: 0.9em;
@@ -478,22 +466,22 @@ style="background-color:#fece18"
     .contenedor{
       z-index: 3;
       height: 10vh;
-      font-family: 'Roboto', sans-serif;
+      font-family: Open Sans Condensed;
       list-style: none;
       color: back;
-      position: relative;
+
     }
 
     .panel{
 
         background-color: white;
-        font-family: 'Roboto', sans-serif;
+          font-family: Open Sans Condensed;
           float: right;
     }
 
   .panelCentral a{
 
-    font-family: 'Roboto', sans-serif;
+    font-family: Open Sans Condensed;
       font-size: 2em;
       color: black;
     }
@@ -507,21 +495,12 @@ style="background-color:#fece18"
       color: #FECE18;
     }
 
-    .espacio{
+    .logo{
       width: 100%;
       padding-left:5%;
       margin-right: 30%;
     }
 
-    .logo-pag{
-      position: absolute;
-      margin-left: 7%;
-    }
-
-    .logo-pag img{
-      width: 120%;
-
-    }
 
     .panelCentral{
       margin-right: 5%;
@@ -539,8 +518,8 @@ style="background-color:#fece18"
     .PanelIzquierdo {
       padding-top: 1vh;
 
-      font-family: 'Roboto', sans-serif;
-      font-size: 1em;
+          font-family: Open Sans Condensed;
+                font-size: 1em;
       width: 100%;
       display: flex;
       float: right;
@@ -702,7 +681,7 @@ style="background-color:#fece18"
   /*-----------------------------------------CARRITO---------------------------------*/
   .titulo-carrito{
     margin: 5%;
-    font-family: 'Roboto', sans-serif;
+    font-family: Open Sans Condensed;
   }
 
   .articulo{
@@ -859,7 +838,7 @@ style="background-color:#fece18"
 .contenedor-perfil{
   overflow: hidden;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: Open Sans Condensed;
 }
 
 .card-perfil{
@@ -869,12 +848,7 @@ style="background-color:#fece18"
   float: left;
 
 }
-.nav-item{
-  z-index: 10;
-}
-.nav-link{
-  z-index: 20;
-}
+
 .nav-config-perfil{
   padding-top: 1%;
   float: left;
@@ -893,11 +867,6 @@ style="background-color:#fece18"
 .titulo-perfil{
   float: left;
   padding-left:  5%;
-}
-
-.back{
-  color: #fece18;
-  padding-top: 1%;
 }
 
 .img-perfil{
@@ -947,7 +916,7 @@ style="background-color:#fece18"
 }
 /*------------------------------------------------------------------------FOOTER---------------------------*/
 .contenedor-footer{
-  font-family: 'Roboto', sans-serif;
+  font-family: Open Sans Condensed;
   color: white;
   overflow: hidden;
   background-color: #21160A;
@@ -1003,7 +972,7 @@ padding-left:  10%;
 }
   /*-----------------------------------------------------MODIFICAR PRODUCTO---------------------------------------*/
   .contenedor-modificar{
-    font-family: 'Roboto', sans-serif;
+    font-family: Open Sans Condensed;
   }
 
 .panel-novedades{
@@ -1028,7 +997,7 @@ overflow: hidden;
   text-align: center;
   color: black;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: Open Sans Condensed;
 }
 
 .logo-novedades{
