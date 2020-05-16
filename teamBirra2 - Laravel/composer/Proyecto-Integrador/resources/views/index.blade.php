@@ -88,9 +88,9 @@
 
     <div class="texto-presentacion col-7 col-sm-7 col-md-7 col-lg-7">
 
-    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-       sed do eiusmod tempor incididun  ut labore et dolore magna
-       aliqua. Ut enim ad minim veniam, </h5>
+    <h5>Una empresa de comercio electrónico dedicada a la venta de cervezas.
+    En la que tienes la posibilidad de elegir la cantidad y variedad que desees de nuestros productos
+    ( OJO !!! siempre que haya stock).Además puedes tener la posibilidad de editar tu propio perfil, </h5>
 
     <a href="/faq" class="faq"><strong>¿Quienes somos? </strong></a>
      </div>
@@ -117,7 +117,7 @@
 
               <a href="/producto/<?php echo $producto["id"]?>">
 
-              
+
                     <div class="marco div_imagen_proxima_animacion">
                       <div class="contenedor_imagen">
                         <img src="/storage/{{$producto->imagen}}" alt=" ">
@@ -179,6 +179,7 @@
     </a>
   </div>
 </div>
+
 
 
 @endsection

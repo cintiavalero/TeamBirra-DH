@@ -37,9 +37,9 @@
 
     <div class="red-social">
 
-      <a href="www.facebook.com"><img src="/images/iconfb.svg" style="color: #fece18;"width="20px" alt=""></a>
-      <a href="www.instagram.com"><img src="/images/iconIg.svg" width="20px" alt=""></a>
-      <a href="www.twitter.com"><img src="/images/iconTw.svg" width="20px" alt=""></a>
+      <a href="/www.facebook.com"><img src="/images/iconfb.svg" style="color: #fece18;"width="20px" alt=""></a>
+      <a href="/www.instagram.com"><img src="/images/iconIg.svg" width="20px" alt=""></a>
+      <a href="/www.twitter.com"><img src="/images/iconTw.svg" width="20px" alt=""></a>
     </div>
 
 

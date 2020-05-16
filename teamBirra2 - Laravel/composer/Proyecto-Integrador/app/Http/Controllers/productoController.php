@@ -111,27 +111,72 @@ class productoController extends Controller
 
     public function mostrarParaModificarProductos(Request $request){
 
-      //$busqueda=$request["busqueda"];
-      $marca=$request->get('marca');
-      $origen=$request->get('origen');
-      $estilo=$request->get('estilo');
-      $color=$request->get('color');
 
-      $productos=Producto::orderBy('precio','ASC')
-      ->where("id_marca",'LIKE',"%$marca%")
-      ->where("id_origen",'LIKE',"%$origen%")
-      ->where("id_estilo",'LIKE',"%$estilo%")
-      ->where("id_color",'LIKE',"%$color%")
-      ->paginate(30);
+              $busqueda=$request->get('busqueda');
 
-    //  dd($productos);
+              if($busqueda)
+                {
 
-      $marcas=marcas:: all();
-      $estilos=estilos::all();
-      $colores=colores::all();
-      $origenes=origenes::all();
-      $vac=compact("productos","marcas","estilos","colores","origenes");
+                    $busquedaMarca=marcas::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+                    $busquedaOrigenes=origenes::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+                    $busquedaEstilos=estilos::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+                    $busquedaColor=colores::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
 
+
+                    if(!empty($busquedaMarca)){
+                        $marca=$busquedaMarca["0"]["id"];
+                        $request["marca"]=$marca;
+                      }else $marca=$request->get('marca');
+
+                    if(!empty($busquedaOrigenes)){
+                      $origen=$busquedaOrigenes["0"]["id"];
+                      $request["origen"]=$origen;
+                    }else $origen=$request->get('origen');
+
+                    if(!empty($busquedaEstilos)){
+                      $estilo=$busquedaEstilos["0"]["id"];
+                      $request["estilo"]=$estilo;
+                    }else $estilo=$request->get('estilo');
+
+                    if(!empty($busquedaColor)){
+                      $color=$busquedaColor["0"]["id"];
+                      $request["color"]=$color;
+                    }else $color=$request->get('color');
+
+
+                  }
+                else {
+                  $marca=$request->get('marca');
+                  $origen=$request->get('origen');
+                  $estilo=$request->get('estilo');
+                  $color=$request->get('color');
+                }
+
+
+              $orden="asc";
+              $cant="9";
+              if(isset($_GET["orden"])){
+                $orden=$_GET["orden"];}
+
+              if(isset($_GET["cantidad"])){
+                $cant=$_GET["cantidad"];}
+
+
+                $productos=Producto::orderBy('precio',$orden)
+                ->where("stock","!=",0)
+                ->where("id_marca",'LIKE',"%$marca%")
+                ->where("id_origen",'LIKE',"%$origen%")
+                ->where("id_estilo",'LIKE',"%$estilo%")
+                ->where("id_color",'LIKE',"%$color%")
+                ->paginate($cant);
+
+                  $marcas=marcas::orderBy('nombre','ASC')->get();
+                  $estilos=estilos::orderBy('nombre','ASC')->get();
+                  $colores=colores::orderBy('nombre','ASC')->get();
+                  $origenes=origenes::orderBy('nombre','ASC')->get();
+                $vac=compact("productos","marcas","estilos","colores","origenes");
+
+        
         return view("modificarProductos",$vac);
     }
 
@@ -206,16 +251,46 @@ class productoController extends Controller
     public static  function listadoDeProductos(Request $request){
 
 
-        $marca=$request->get('marca');
-        $origen=$request->get('origen');
-        $estilo=$request->get('estilo');
-        $color=$request->get('color');
+
         $busqueda=$request->get('busqueda');
 
-        $busquedaMarca=marcas::where("nombre",'LIKE',"%$busqueda%")->get();
-        $busquedaOrigenes=origenes::where("nombre",'LIKE',"%$busqueda%")->get();
-        $busquedaEstilos=estilos::where("nombre",'LIKE',"%$busqueda%")->get();
-        $busquedaColor=colores::where("nombre",'LIKE',"%$busqueda%")->get();
+        if($busqueda)
+          {
+
+              $busquedaMarca=marcas::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+              $busquedaOrigenes=origenes::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+              $busquedaEstilos=estilos::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+              $busquedaColor=colores::where("nombre",'LIKE',"%$busqueda%")->get()->toArray();
+
+
+              if(!empty($busquedaMarca)){
+                  $marca=$busquedaMarca["0"]["id"];
+                  $request["marca"]=$marca;
+                }else $marca=$request->get('marca');
+
+              if(!empty($busquedaOrigenes)){
+                $origen=$busquedaOrigenes["0"]["id"];
+                $request["origen"]=$origen;
+              }else $origen=$request->get('origen');
+
+              if(!empty($busquedaEstilos)){
+                $estilo=$busquedaEstilos["0"]["id"];
+                $request["estilo"]=$estilo;
+              }else $estilo=$request->get('estilo');
+
+              if(!empty($busquedaColor)){
+                $color=$busquedaColor["0"]["id"];
+                $request["color"]=$color;
+              }else $color=$request->get('color');
+
+
+            }
+          else {
+            $marca=$request->get('marca');
+            $origen=$request->get('origen');
+            $estilo=$request->get('estilo');
+            $color=$request->get('color');
+          }
 
 
         $orden="asc";
